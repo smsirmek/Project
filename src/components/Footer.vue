@@ -16,7 +16,7 @@
               <div class="col-2">
                 <ul>
                   <router-link class="link" :to="{ name:'home'}">Home</router-link>
-                  <router-link class="link" :to="{ name:'Market'}">Market</router-link>
+                  <router-link class="link" :to="{ name:'blogs'}">Market</router-link>
                   <router-link v-if="user" class="link" :to="{ name:'newpost'}">create</router-link>
                   <router-link v-if="!user" class="link" :to="{ name:'login'}">Login/Regis</router-link>
                 </ul>
