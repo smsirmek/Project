@@ -6,7 +6,7 @@
       <div class="container">
         <h3>View more Blog Market</h3>
         <div class="blog-cards">
-          <BlogCards :post="post" v-for="(post, index) in sampleBlogCards" :key="index" />
+          <BlogCard :post="post" v-for="(post, index) in sampleBlogCards" :key="index" />
         </div>
       </div>
     </div>
@@ -16,10 +16,10 @@
 
 <script>
 import BlogPost from "../components/BlogPost";
-import BlogCards from "../components/BlogCard";
+import BlogCard from "../components/BlogCard";
 export default {
   name: "Home",
-  components: {BlogPost,BlogCards},
+  components: {BlogPost,BlogCard},
   data(){
     return{
       welcomeScreen:{
@@ -41,16 +41,13 @@ export default {
           blogCoverPhoto: "designed-for-everyone",
       },
       ],
-      sampleBlogCards:[
-        
-        { blogTitle: "Blog Card #1", blogCoverPhoto: "stock-1", blogDate: "Aug 1,2021"},
-        { blogTitle: "Blog Card #2", blogCoverPhoto: "stock-2", blogDate: "Aug 1,2021"},
-        { blogTitle: "Blog Card #3", blogCoverPhoto: "stock-3", blogDate: "Aug 1,2021"},
-        { blogTitle: "Blog Card #4", blogCoverPhoto: "stock-4", blogDate: "Aug 1,2021"},
-      ],
     };
   },
-
+  computed:{
+    sampleBlogCards() {
+      return this.$store.state.sampleBlogCards;
+    }
+  }
 };
 </script>
 
