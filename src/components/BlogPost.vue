@@ -4,14 +4,14 @@
         <div>
           <h2 v-if="post.welcomeScreen">{{ post.title }}</h2>
           <h2 v-else>{{post.title}}</h2>
-          <p v-if="post.welcomeScreen">{{ post.blogPost }}</p>
+          <p v-if="post.welcomeScreen">{{ post.BlogPost }}</p>
           <p class="content-preview" v-else>{{ post.blogHTML }}</p>
           <router-link class="link link-light" v-if="post.welcomeScreen" to="#">
            Login/Register <Arrow class="arrow arrow-light"/>
           </router-link>
           
            <router-link class="link" v-else to="#">
-           View Market <Arrow class="arrow"/>
+           View Post <Arrow class="arrow"/>
           </router-link>
         </div>
     </div>
@@ -144,7 +144,7 @@ export default {
 
 .no-user:first-child{
   .blog-content{
-    background-color: #303030;
+    background-color: #018559;
     color: #fff;
   }
 }

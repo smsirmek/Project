@@ -3,7 +3,7 @@
       <div class="container">
           <div class="left">
               <div class="col-1">
-                  <router-link  class="header" :to="{ name:'Home'}">gMarket</router-link>
+                  <router-link  class="header" :to="{ name:'Home'}">Posts</router-link>
                 <ul>
                     <li>
                         <a href="#"><twitter class="svg-icon"/></a>
@@ -16,9 +16,9 @@
               <div class="col-2">
                 <ul>
                   <router-link class="link" :to="{ name:'Home'}">Home</router-link>
-                  <router-link class="link" :to="{ name:'Blogs'}">Market</router-link>
-                  <router-link class="link" :to="{ name:'newpost'}">create</router-link>
-                  <router-link class="link" :to="{ name:'login'}">Login/Regis</router-link>
+                  <router-link class="link" :to="{ name:'Blogs'}">Blogs</router-link>
+                  <router-link class="link" to="#">create</router-link>
+                  <router-link class="link" :to="{ name:'Login'}">Login/Regis</router-link>
                 </ul>
               </div>
           </div>
@@ -46,7 +46,7 @@ export default {
 footer {
     margin-top: auto;
     padding: 75px 25px;
-    background-color: #2b7394;
+    background-color: #30473a;
     .container {
         display: flex;
         flex-direction: column;

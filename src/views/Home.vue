@@ -24,7 +24,7 @@ export default {
     return{
       welcomeScreen:{
         title: "Welcome",
-        BlogPost: "Register to create BlogMarket",
+        BlogPost: "Register to viwe post",
         welcomeScreen: true,
         photo: "coding",
 

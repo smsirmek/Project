@@ -2,14 +2,14 @@
   <header>
     <nav class="container">
           <div class="branding">
-              <router-link  class="header" :to="{ name:'Home'}">gMarket</router-link>
+              <router-link  class="header" :to="{ name:'Home'}">Posts</router-link>
           </div>
           <div class="nav-link">
               <ul v-show="!mobile">
                   <router-link class="link" :to="{ name:'Home'}">Home</router-link>
-                  <router-link class="link" :to="{ name: 'Blogs'}">Market</router-link>
+                  <router-link class="link" :to="{ name: 'Blogs'}">Blogs</router-link>
                   <router-link class="link" to="#">contant</router-link>
-                  <router-link class="link" to="#">Login</router-link>
+                  <router-link class="link" :to="{ name: 'Login'}">Login</router-link>
               </ul>
           </div>
     </nav>
@@ -18,9 +18,9 @@
       <transition name="mobile-nav">
           <ul class="mobile-nav" v-show="mobileNav">
              <router-link class="link" :to="{ name:'Home'}">Home</router-link>
-             <router-link class="link" :to="{ name: 'Blogs'}">Market</router-link>
+             <router-link class="link" :to="{ name: 'Blogs'}">Blogs</router-link>
              <router-link class="link" to="#">contant</router-link>
-             <router-link class="link" to="#">Login</router-link>
+             <router-link class="link" :to="{ name: 'Login'}">Login</router-link>
          </ul>
       </transition>
   </header>
