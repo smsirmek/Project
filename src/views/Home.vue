@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BlogPost :post="welcomeScreen" />
+    <BlogPost v-if="!user" :post="welcomeScreen" />
     <BlogPost :post="post" v-for="(post,index) in sampleBlogPost" :key="index" />
     <div class="blog-card-wrap">
       <div class="container">
@@ -46,8 +46,11 @@ export default {
   computed:{
     sampleBlogCards() {
       return this.$store.state.sampleBlogCards;
-    }
-  }
+    },
+    user() {
+           return this.$store.state.user;
+        },
+  },
 };
 </script>
 
